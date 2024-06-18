@@ -48,7 +48,7 @@ const SideNavbar = () => {
           </h2>
         ))}
       </div>
-      <div className="fixed bottom-20 p-6 w-64">
+      <div className="fixed bottom-7 p-6 w-64">
         <Button className="w-full">+ CreateForm</Button>
         <div className="my-5">
           <Progress value={33} />
