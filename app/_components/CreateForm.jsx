@@ -35,7 +35,7 @@ const CreateForm = () => {
                 >
                   Cancel
                 </Button>
-                <Button onClick={onCreateForm}>Create</Button>
+                <Button onClick={onCreateForm}>Create form</Button>
               </div>
             </DialogDescription>
           </DialogHeader>
