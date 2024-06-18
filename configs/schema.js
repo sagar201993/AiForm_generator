@@ -1,4 +1,4 @@
-const { pgTable, varchar } = require("drizzle-orm/pg-core");
+const { pgTable, varchar, serial, text } = require("drizzle-orm/pg-core");
 
 export const JsonForms = pgTable("josnForms", {
   id: serial("id").primaryKey(),
