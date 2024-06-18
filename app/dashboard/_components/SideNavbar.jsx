@@ -2,6 +2,8 @@
 import React, { useEffect } from "react";
 import { LibraryBig, LineChart, MessageSquare, Shield } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
 
 const SideNavbar = () => {
   const menuList = [
@@ -45,6 +47,20 @@ const SideNavbar = () => {
             {menu.name}
           </h2>
         ))}
+      </div>
+      <div className="fixed bottom-20 p-6 w-64">
+        <Button className="w-full">+ CreateForm</Button>
+        <div className="my-5">
+          <Progress value={33} />
+          <h2 className="text-sm mt-2 text-gray-600">
+            <strong>2 out of 3 file created</strong>
+          </h2>
+          <h2 className="text-sm mt-2 text-gray-600">
+            <h2 className="text-sm mt-2 text-gray-600">
+              <strong>upgrade your plan</strong>
+            </h2>
+          </h2>
+        </div>
       </div>
     </div>
   );
