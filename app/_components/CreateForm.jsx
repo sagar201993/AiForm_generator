@@ -17,7 +17,7 @@ const CreateForm = () => {
   const onCreateForm = () => {};
   return (
     <div>
-      <Button onClick={() => setopenDialog(true)}> +Create Form action</Button>
+      <Button onClick={() => setopenDialog(true)}> +Create Form </Button>
       <Dialog open={openDialog}>
         <DialogContent>
           <DialogHeader>
