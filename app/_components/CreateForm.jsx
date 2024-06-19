@@ -11,10 +11,17 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 
 import { Button } from "@/components/ui/button";
+import { AichatSession } from "@/configs/AiModal";
 const CreateForm = () => {
   const [openDialog, setopenDialog] = useState(false);
   const [userInput, setuserInput] = useState("");
-  const onCreateForm = () => {};
+  const onCreateForm = async () => {
+    const promt = "create a simple student registration from";
+    const result = await AichatSession.sendMessage(
+      "DEscription" + userInput + promt
+    );
+    console.log(result.response.text());
+  };
   return (
     <div>
       <Button onClick={() => setopenDialog(true)}> +Create Form </Button>
