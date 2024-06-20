@@ -15,12 +15,18 @@ import { AichatSession } from "@/configs/AiModal";
 const CreateForm = () => {
   const [openDialog, setopenDialog] = useState(false);
   const [userInput, setuserInput] = useState("");
+  const [loading, setLoading] = useState();
+  const promt = "create a simple student registration from";
   const onCreateForm = async () => {
-    const promt = "create a simple student registration from";
+    setLoading(true);
     const result = await AichatSession.sendMessage(
       "DEscription" + userInput + promt
     );
     console.log(result.response.text());
+    if (result.response.text()) {
+      setLoading(false);
+    }
+    setLoading(false);
   };
   return (
     <div>
@@ -42,7 +48,9 @@ const CreateForm = () => {
                 >
                   Cancel
                 </Button>
-                <Button onClick={onCreateForm}>Create form</Button>
+                <Button disabled={loading} onClick={onCreateForm}>
+                  Create form
+                </Button>
               </div>
             </DialogDescription>
           </DialogHeader>
